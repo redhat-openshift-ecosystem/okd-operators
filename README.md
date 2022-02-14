@@ -3,7 +3,7 @@
 
 ## About this repository
 
-This repo is the canonical source for Kubernetes Operators that should appear only in [OKD](https://okd.io).
+This repo is the canonical source for Kubernetes Operators that should appears only in [OKD](https://okd.io). This repo is for operators which are **not** expected to be visible in OpenShift catalog.
 
-## IMPORTANT: To distribute your solution in OpenShift and OKD catalogs you must publish your projects in https://github.com/redhat-openshift-ecosystem/community-operators-prod.  
+## IMPORTANT: To distribute your solution in OpenShift and OKD catalogs please publish your Operator in https://github.com/redhat-openshift-ecosystem/community-operators-prod.  
 
