@@ -13,7 +13,7 @@
     
     
       
-        <title>OKD/OpenShift Catalogs criteria and options - Community operators</title>
+        <title>Maintainer - Community operators</title>
       
     
     
@@ -64,7 +64,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#okdopenshift-catalogs-criteria-and-options" class="md-skip">
+        <a href="#maintainer-documentation-in-progress" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              OKD/OpenShift Catalogs criteria and options
+              Maintainer
             
           </span>
         </div>
@@ -217,15 +217,13 @@
         
   
   
-    
-  
 
 
   
   
   
     <li class="md-tabs__item">
-      <a href="../contributing-prerequisites/" class="md-tabs__link md-tabs__link--active">
+      <a href="../contributing-prerequisites/" class="md-tabs__link">
         Contributing
       </a>
     </li>
@@ -283,10 +281,12 @@
         
   
   
+    
+  
 
 
   <li class="md-tabs__item">
-    <a href="../maintainer-documentation/" class="md-tabs__link">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
       Maintainer
     </a>
   </li>
@@ -495,14 +495,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
       
       
       
@@ -635,48 +633,11 @@
               
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          OKD/OpenShift Catalogs criteria and options
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../packaging-required-criteria-ocp/" class="md-nav__link">
         OKD/OpenShift Catalogs criteria and options
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#okdopenshift-catalogs-criteria-and-options" class="md-nav__link">
-    OKD/OpenShift Catalogs criteria and options
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -754,11 +715,52 @@
 
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../maintainer-documentation/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Maintainer
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Maintainer
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#authorized-changes-label-is-missing" class="md-nav__link">
+    Authorized-changes label is missing
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -792,62 +794,81 @@
                 
                   
 
-  <a href="https://github.com/operator-framework/community-operators/edit/master/docs/packaging-required-criteria-ocp.md" title="Edit this page" class="md-content__button md-icon">
+  <a href="https://github.com/operator-framework/community-operators/edit/master/docs/maintainer-documentation.md" title="Edit this page" class="md-content__button md-icon">
     
     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
   </a>
 
 
-  <h1>OKD/OpenShift Catalogs criteria and options</h1>
-
-<h2 id="okdopenshift-catalogs-criteria-and-options">OKD/OpenShift Catalogs criteria and options</h2>
-<h3 id="overview">Overview</h3>
-<p>To distribute on OpenShift Catalogs, you will need to comply with the same standard criteria defined for <code>OperatorHub.io</code> (see <a href="https://olm.operatorframework.io/docs/best-practices/common/#validate-your-bundle-before-publish-it">Common recommendations and suggestions</a>). Then, additionally, you have some requirements and options which follows.</p>
-<blockquote>
-<p><strong>IMPORTANT</strong> Kubernetes has been deprecating API(s) which will be removed and no longer available in <code>1.22</code> and in the Openshift version <code>4.9</code>. Note that your project will be unable to use them on <code>OCP 4.9/K8s 1.22</code> and then, it is strongly recommended to check <a href="https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-22">Deprecated API Migration Guide from v1.22</a> and ensure that your projects have them migrated and are not using any deprecated API.</p>
-<p>Note that your operator using them will not work in  <code>1.22</code> and in the Openshift version <code>4.9</code>. OpenShift 4.8 introduces two new alerts that fire when an API that will be removed in the next release is in use. Check the event alerts of your Operators running on 4.8 and ensure that you will not find any warning about these API(s) still being used by it. </p>
-<p>Also, to prevent workflow issues, its users will need to have installed in their OCP cluster a version of your operator compatible with 4.9 before they try to upgrade their cluster from any previous version to 4.9 or higher. In this way, it is recommended to ensure that your operators are no longer using these API(s) versions. However, If you still need to publish the operator bundles with any of these API(s) for use on earlier k8s/OCP versions, ensure that the operator bundle is configured accordingly. </p>
-<p>Taking the actions below will help prevent users from installing versions of your operator on an incompatible version of OCP, and also prevent them from upgrading to a newer version of OCP that would be incompatible with the version of your operator that is currently installed on their cluster.</p>
-</blockquote>
-<h3 id="configure-the-max-openshift-version-compatible">Configure the max OpenShift Version compatible</h3>
-<p>Use the <code>olm.openShiftMaxVersion</code> annotation in the CSV to prevent the user from upgrading their OCP cluster before upgrading the installed operator version to any distribution which is compatible with:</p>
-<div class="codehilite"><pre><span></span><code><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">operators.coreos.com/v1alpha1</span><span class="w"></span>
-<span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterServiceVersion</span><span class="w"></span>
-<span class="nt">metadata</span><span class="p">:</span><span class="w"></span>
-<span class="w">  </span><span class="nt">annotations</span><span class="p">:</span><span class="w"></span>
-<span class="w">    </span><span class="c1"># Prevent cluster upgrades to OpenShift Version 4.9 when this </span><span class="w"></span>
-<span class="w">    </span><span class="c1"># bundle is installed on the cluster</span><span class="w"></span>
-<span class="w">    </span><span class="s">&quot;olm.properties&quot;</span><span class="p p-Indicator">:</span><span class="w"> </span><span class="s">&#39;[{&quot;type&quot;:</span><span class="nv"> </span><span class="s">&quot;olm.maxOpenShiftVersion&quot;,</span><span class="nv"> </span><span class="s">&quot;value&quot;:</span><span class="nv"> </span><span class="s">&quot;4.8&quot;}]&#39;</span><span class="w"></span>
-</code></pre></div>
-
-<p>The CSV annotation will eventually prevent the user from upgrading their OCP cluster before they have installed a version of your operator which is compatible with <code>4.9</code>. However, note that it is important to make these changes now as users running workloads with deprecated API(s) that are looking to upgrade to OCP 4.9 will need to be running operators that have this annotation set in order to prevent the cluster upgrade and potentially adversely impacting their crucial workloads.</p>
-<p>This option is useful when you know that the current version of your project will not work well on some specific Openshift version.</p>
-<h3 id="configure-the-openshift-distribution">Configure the Openshift distribution</h3>
-<p>Use the annotation <code>com.redhat.openshift.versions</code> in <code>bundle/metadata/annotations.yaml</code> to ensure that the index image will be generated with its OCP Label, to prevent the bundle from being distributed on to 4.9:</p>
-<div class="codehilite"><pre><span></span><code>com.redhat.openshift.versions: &quot;v4.6-v4.8&quot;
-</code></pre></div>
-
-<p>This option is also useful when you know that the current version of your project will not work well on some specific OpenShift version. By using it you defined the Openshift versions where the Operator should be distributed and the Operator will not appear in a catalog of an Openshift version which is outside of the range. You must use it if you are distributing a solution that contains deprecated API(s) and will no longer be available in later versions. For more information see <a href="https://redhat-connect.gitbook.io/certified-operator-guide/ocp-deployment/operator-metadata/bundle-directory/managing-openshift-versions">Managing OpenShift Versions</a>.</p>
-<h3 id="validate-the-bundle-with-the-common-criteria-to-distribute-via-olm-with-sdk">Validate the bundle with the common criteria to distribute via OLM with SDK</h3>
-<p>Also, you can check the bundle via <a href="https://sdk.operatorframework.io/docs/cli/operator-sdk_bundle_validate/"><code>operator-sdk bundle validate</code></a> against the suite  Validator <a href="https://olm.operatorframework.io/docs/tasks/creating-operator-bundle/#optional-validation">Community Operators</a> and the K8s Version that you are intended to publish:</p>
-<div class="codehilite"><pre><span></span><code>operator-sdk bundle validate ./bundle --select-optional <span class="nv">suite</span><span class="o">=</span>operatorframework --optional-values<span class="o">=</span>k8s-version<span class="o">=</span><span class="m">1</span>.22
-</code></pre></div>
-
-<p><strong>NOTE:</strong> The validators only checks the manifests which are shipped in the bundle. They are unable to ensure that the project's code does not use the <a href="https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-22">Deprecated/Removed API(s) in 1.22</a> and/or that it does not have as dependency another operator that uses them.</p>
-<h3 id="validate-the-bundle-with-the-specific-criteria-to-distribute-in-openshift-catalogs">Validate the bundle with the specific criteria to distribute in Openshift catalogs</h3>
-<p><strong>Pre-requirement</strong>
-Download the <a href="https://github.com/redhat-openshift-ecosystem/ocp-olm-catalog-validator/releases">binary</a>. You might want to keep it in your <code>$GOPTH/bin</code></p>
-<p>Then, we can use the experimental <a href="https://github.com/redhat-openshift-ecosystem/ocp-olm-catalog-validator">OpenShift OLM Catalog Validator</a> to check your Operator bundle.
-In this case, we need to inform the bundle and the annotations.yaml file paths:</p>
-<div class="codehilite"><pre><span></span><code>$ ocp-olm-catalog-validator my-bundle-path/bundle  --optional-values<span class="o">=</span><span class="s2">&quot;file=bundle-path/bundle/metadata/annotations.yaml&quot;</span>
-</code></pre></div>
-
-<p>Following an example of an Operator bundle which uses the removed APIs in 1.22 and is not configured accordingly:</p>
-<div class="codehilite"><pre><span></span><code>$ ocp-olm-catalog-validator bundle/ --optional-values<span class="o">=</span><span class="s2">&quot;file=bundle/metadata/annotations.yaml&quot;</span>
-WARN<span class="o">[</span><span class="m">0000</span><span class="o">]</span> Warning: Value memcached-operator.v0.0.1: this bundle is using APIs which were deprecated and removed <span class="k">in</span> v1.22. More info: https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-22. Migrate the API<span class="o">(</span>s<span class="o">)</span> <span class="k">for</span> CRD: <span class="o">([</span><span class="s2">&quot;memcacheds.cache.example.com&quot;</span><span class="o">])</span> 
-ERRO<span class="o">[</span><span class="m">0000</span><span class="o">]</span> Error: Value : <span class="o">(</span>memcached-operator.v0.0.1<span class="o">)</span> olm.maxOpenShiftVersion csv.Annotations not specified with an OCP version lower than <span class="m">4</span>.9. This annotation is required to prevent the user from upgrading their OCP cluster before they have installed a version of their operator which is compatible with <span class="m">4</span>.9. For further information see https://docs.openshift.com/container-platform/4.8/operators/operator_sdk/osdk-working-bundle-images.html#osdk-control-compat_osdk-working-bundle-images 
-ERRO<span class="o">[</span><span class="m">0000</span><span class="o">]</span> Error: Value : <span class="o">(</span>memcached-operator.v0.0.1<span class="o">)</span> this bundle is using APIs which were deprecated and removed <span class="k">in</span> v1.22. More info: https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-22. Migrate the APIs <span class="k">for</span> this bundle is using APIs which were deprecated and removed <span class="k">in</span> v1.22. More info: https://kubernetes.io/docs/reference/using-api/deprecation-guide/#v1-22. Migrate the API<span class="o">(</span>s<span class="o">)</span> <span class="k">for</span> CRD: <span class="o">([</span><span class="s2">&quot;memcacheds.cache.example.com&quot;</span><span class="o">])</span> or provide compatible version<span class="o">(</span>s<span class="o">)</span> via the labels. <span class="o">(</span>e.g. LABEL com.redhat.openshift.versions<span class="o">=</span><span class="s1">&#39;4.6-4.8&#39;</span><span class="o">)</span> 
-</code></pre></div>
+<h1 id="maintainer-documentation-in-progress">Maintainer documentation [in progress...]</h1>
+<p>Community team is responsible for review
+- <a href="https://github.com/redhat-openshift-ecosystem/community-operators-prod/pulls">OCP operators</a>
+- <a href="https://github.com/k8s-operatorhub/community-operators/pulls">K8S operators</a></p>
+<p>Investigation on failed tests can be very complex, but there are also very easy tasks which ublocks majority of PRs.</p>
+<h2 id="authorized-changes-label-is-missing">Authorized-changes label is missing</h2>
+<p>Reasons:
+- New operator
+    - When
+        - <code>new-operator</code> label is present 
+    - What to do
+        - Copy content of <code>clusterserviceversion.yaml</code> file to https://operatorhub.io/preview and check visually if content looks correct and all fields on the right don’t contain <code>N/A</code> except <code>channel</code>.</p>
+<ul>
+<li>
+<p>No reviewer in ci.yaml file</p>
+<ul>
+<li>
+<p>When</p>
+<ul>
+<li>Missing <code>authorized-changes</code> label message is displayed.</li>
+</ul>
+</li>
+<li>
+<p>What to do</p>
+<ul>
+<li>Apply label <code>authorized-changes</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Author is not in reviewer list in ci.yaml and ci.yaml file was not modified</p>
+<ul>
+<li>
+<p>When</p>
+<ul>
+<li><code>@contributor_name please approve</code> message is displayed</li>
+</ul>
+</li>
+<li>
+<p>What to do</p>
+<ul>
+<li>Wait for approval<ul>
+<li>If authorized changes is not set after approval, please one of three options documented <a href="https://redhat-openshift-ecosystem.github.io/community-operators-prod/self-merge-updates/#how-can-i-approve-a-pr-against-my-operator">here</a>.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Author is not in reviewer list in <code>ci.yaml</code> and <code>ci.yaml</code> file is modified</p>
+<ul>
+<li>
+<p>When</p>
+<ul>
+<li><code>/ hold Please note that `ci.yaml` was changed</code> message is displayed</li>
+</ul>
+</li>
+<li>
+<p>What to do</p>
+<ul>
+<li>Wait for approval and add <code>/unhold</code> if needed.</li>
+<li>If authorized changes is not set after approval, please one of three options documented <a href="https://redhat-openshift-ecosystem.github.io/community-operators-prod/self-merge-updates/#how-can-i-approve-a-pr-against-my-operator">here</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
 
 
@@ -868,7 +889,7 @@ ERRO<span class="o">[</span><span class="m">0000</span><span class="o">]</span> 
     <nav class="md-footer__inner md-grid" aria-label="Footer" >
       
         
-        <a href="../self-merge-updates/" class="md-footer__link md-footer__link--prev" aria-label="Previous: How do i deploy operator faster?" rel="prev">
+        <a href="../troubleshooting/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Troubleshooting" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
           </div>
@@ -877,20 +898,20 @@ ERRO<span class="o">[</span><span class="m">0000</span><span class="o">]</span> 
               <span class="md-footer__direction">
                 Previous
               </span>
-              How do i deploy operator faster?
+              Troubleshooting
             </div>
           </div>
         </a>
       
       
         
-        <a href="../operator-release-process/" class="md-footer__link md-footer__link--next" aria-label="Next: Release process" rel="next">
+        <a href="../stats/" class="md-footer__link md-footer__link--next" aria-label="Next: Statistics" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Release process
+              Statistics
             </div>
           </div>
           <div class="md-footer__button md-icon">
